@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dae9f9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Blog Titles */
+h1, h2 {
+    color: #2906a9;
+    text-align: center;
+    margin-bottom:20px;
+}
+
+/* Paragraph styling */
+p {
+    color: #363434;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Image styling */
+img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Blog post sections */
+section {
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    background-color: #fff;
+}
+
+article {
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #8f8e8e;
+    border-radius: 8px;
+    width: 80%;
+    background-color: #f0f2f4;
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Links */
+a {
+    color: #0869cb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form section */
+#contact-form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width:80%;
+    background-color: #fff;
+}
+
+/* Input fields and text area */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+/* Contact Info Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f2f2f2;
+}

@@ -1,27 +1,86 @@
 let todos = [];
 
-function startApp() {
-  let choice;
-  do {
-    choice = prompt(
-      "To-Do List App\n" +
-      "1. Add Task\n" +
-      "2. Show All Tasks\n" +
+function showTasks() {
+  if (todos.length === 0) {
+    alert("No tasks available.");
+    return;
+  }
+
+  let msg = " Current To-Do List:\n\n";
+  todos.forEach((task, index) => {
+    msg += `${index + 1}. ${task.title} - ${task.description} [${task.completed ? " Done" : " Not done"}]\n`;
+  });
+  alert(msg);
+}
+
+function addTask() {
+  const title = prompt("Enter task title:");
+  if (!title) return alert("Title is required.");
+
+  const description = prompt("Enter task description:") || "";
+  const task = { title, description, completed: false };
+
+  todos.push(task);
+  alert("Task added!");
+}
+
+function deleteTask() {
+  if (todos.length === 0) return alert("No tasks to delete.");
+  showTasks();
+
+  const index = parseInt(prompt("Enter task number to delete:")) - 1;
+  if (isNaN(index) || index < 0 || index >= todos.length) return alert("Invalid task number.");
+
+
+  todos.splice(index, 1);
+  alert("Task deleted.");
+}
+
+function editTask() {
+  if (todos.length === 0) return alert("No tasks to edit.");
+  showTasks();
+
+  const index = parseInt(prompt("Enter task number to edit:")) - 1;
+  if (isNaN(index) || index < 0 || index >= todos.length) return alert("Invalid task number.");
+
+  const newTitle = prompt("New title:", todos[index].title);
+  const newDesc = prompt("New description:", todos[index].description);
+  const isDone = confirm("Mark as completed?");
+
+  todos = todos.map((task, i) => {
+    if (i === index) {
+      return {
+        title: newTitle || task.title,
+        description: newDesc || task.description,
+        completed: isDone
+      };
+    }
+    return task;
+  });
+
+  alert("Task updated.");
+}
+
+function menu() {
+  let run = true;
+
+  while (run) {
+    const choice = prompt(
+      " TO-DO MENU\n\n" +
+      "1. Show Tasks\n" +
+      "2. Add Task\n" +
       "3. Edit Task\n" +
       "4. Delete Task\n" +
-      "5. Mark Task as Completed\n" +
-      "6. Show Completed Tasks\n" +
-      "7. Show Incomplete Tasks\n" +
-      "8. Exit\n" +
-      "Enter your choice:"
+      "5. Exit\n\n" +
+      "Choose (1–5):"
     );
 
     switch (choice) {
       case "1":
-        addTask();
+        showTasks();
         break;
       case "2":
-        displayTasks(todos);
+        addTask();
         break;
       case "3":
         editTask();
@@ -30,97 +89,16 @@ function startApp() {
         deleteTask();
         break;
       case "5":
-        markTaskCompleted();
-        break;
-      case "6":
-        filterTasks(true);
-        break;
-      case "7":
-        filterTasks(false);
-        break;
-      case "8":
-        alert("Exiting To-Do App.");
+        run = false;
+        alert("finish");
         break;
       default:
-        alert("Invalid option. Please choose from 1 to 8.");
+        alert("Invalid option. Choose 1 to 5.");
     }
-  } while (choice !== "8");
-}
-
-function addTask() {
-  const title = prompt("Enter task title:");
-  if (title) {
-    const task = {
-      title: title,
-      completed: false
-    };
-    todos.push(task);
-    alert("Task added!");
-  } else {
-    alert("Task title cannot be empty.");
   }
 }
 
-function displayTasks(taskArray) {
-  if (taskArray.length === 0) {
-    alert("No tasks available.");
-    return;
-  }
-  let output = "Your Tasks:\n";
-  taskArray.forEach((task, index) => {
-    output += `${index + 1}. [${task.completed ? "✔" : " "}] ${task.title}\n`;
-  });
-  alert(output);
-}
-function editTask() {
-  if (todos.length === 0) return alert("No tasks to edit.");
+menu();
 
-  const index = parseInt(prompt("Enter task number to edit:")) - 1;
-  if (index >= 0 && index < todos.length) {
-    const newTitle = prompt("Enter new title:");
-    if (newTitle) {
-      todos[index].title = newTitle;
-      alert("Task updated.");
-    } else {
-      alert("Title cannot be empty.");
-    }
-  } else {
-    alert("Invalid task number.");
-  }
-}
 
-function deleteTask() {
-  if (todos.length === 0) return alert("No tasks to delete.");
-
-  const index = parseInt(prompt("Enter task number to delete:")) - 1;
-  if (index >= 0 && index < todos.length) {
-   todos.splice(index, 1);
-    alert("Task deleted.");
-  } else {
-    alert("Invalid task number.");
-  }
-}
-
-function markTaskCompleted() {
-  if (todos.length === 0) return alert("No tasks to mark.");
-
-  const index = parseInt(prompt("Enter task number to mark as completed:")) - 1;
-  if (index >= 0 && index < todos.length) {
-    todos[index].completed = true;
-    alert("Task marked as completed.");
-  } else {
-    alert("Invalid task number.");
-  }
-}
-
-function filterTasks(showCompleted) {
-  const filtered = tasks.filter(task => task.completed === showCompleted);
-  if (showCompleted) {
-    displayTasks(filtered);
-  } else {
-    displayTasks(filtered);
-  }
-}
-
-startApp();
 

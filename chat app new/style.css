@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  background: #91aaef;
   padding: 0;
   margin: 0;
 }
@@ -8,16 +8,16 @@ body {
 .container {
   width: 400px;
   margin: 50px auto;
-  background: white;
-  border-radius: 5px;
-  padding: 20px;
+  background: #ffffff;
+  border-radius: 2px;
+  padding: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .messages {
   height: 300px;
   overflow-y: auto;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   margin-bottom: 10px;
   padding: 10px;
 }
@@ -32,10 +32,9 @@ input {
 }
 
 button {
-  padding: 8px 12px;
+  padding: 10px 12px;
   margin: 5px;
   background: #06a247;
   color: white;
-  border: none;
   cursor: pointer;
 }

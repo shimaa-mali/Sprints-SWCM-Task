@@ -1,23 +1,30 @@
-function displayWeather(temp, humidity, condition) {
+function displayWeather(city, temperature, humidity, condition) {
   try {
-    if (temp == null || humidity == null || !condition) {
-      throw new Error("Invalid weather data");
+ 
+    if (!city || temperature === undefined || humidity === undefined || !condition) {
+      throw new Error("Invalid or missing weather data.");
     }
 
-    console.log(`Temperature: ${temp}°C`);
-    console.log(`Humidity: ${humidity}%`);
-    console.log(`Condition: ${condition}`);
+    document.getElementById("city-name").textContent = `City: ${city}`;
+    document.getElementById("temperature").textContent = `Temperature: ${temperature}°C`;
+    document.getElementById("humidity").textContent = `Humidity: ${humidity}%`;
+    document.getElementById("condition").textContent = `Condition: ${condition}`;
   } catch (error) {
-    console.error("Error: Unable to display weather data.", error.message);
+    alert("Error: " + error.message);
   }
 }
 
-function simulateWeather() {
-  const temp = 28;
-  const humidity = 65;
-  const condition = "Sunny";
 
-  displayWeather(temp, humidity, condition);
+function simulateWeather() {
+
+  const weatherData = {
+    city: "Cairo",
+    temperature: Math.floor(Math.random() * 35) + 10, 
+    humidity: Math.floor(Math.random() * 60) + 20,    
+    condition: "Sunny"
+  };
+
+  displayWeather(weatherData.city, weatherData.temperature, weatherData.humidity, weatherData.condition);
 }
 
 simulateWeather();

@@ -1,24 +1,63 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Pages | High-End Dining Experience</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us | Delight Restaurant</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="post">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <div class="contact-details">
-            <p>Email: info@restaurant.com</p>
-            <p>Phone: +123 456 789</p>
-            <p>Location: 123 Luxury Street, City, Country</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <section id="contact">
+        <h1>Contact Delight Restaurant</h1>
+        
+        <div id="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        
+        <div id="contact-info">
+            <h2>Our Information</h2>
+            <p><strong>Address:</strong> 123 Luxury Street, Culinary District, NY 10001</p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p><strong>Email:</strong> reservations@gourmetdelight.com</p>
+            <p><strong>Hours:</strong> Monday-Sunday, 11am-11pm</p>
+        </div>
+        
+        <div id="map">
+            <h2>Find Us</h2>
+            <!-- This would typically be replaced with an actual map embed -->
+            <p>[Map of restaurant location would appear here]</p>
         </div>
     </section>
+
+    <footer>
+        <p>&copy; 2025 Delight Restaurant. All rights reserved.</p>
+    </footer>
 </body>
 </html>

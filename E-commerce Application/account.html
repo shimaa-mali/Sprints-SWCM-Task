@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - ShopEasy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">ShopEasy</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html" class="cart-icon">Cart <span class="cart-count">3</span></a></li>
+                    <li><a href="account.html" class="active">My Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="account-container">
+            <div class="account-sidebar">
+                <h3>My Account</h3>
+                <ul class="account-menu">
+                    <li><a href="account.html" class="active">Dashboard</a></li>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="#">Addresses</a></li>
+                    <li><a href="#">Account Details</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+            
+            <div class="account-content">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="https://via.placeholder.com/80" alt="User Avatar">
+                    </div>
+                    <div class="profile-info">
+                        <h2>John Doe</h2>
+                        <p>Member since January 2023</p>
+                    </div>
+                </div>
+                
+                <h3>Recent Orders</h3>
+                <table class="order-history">
+                    <thead>
+                        <tr>
+                            <th>Order #</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>June 15, 2023</td>
+                            <td><span class="order-status status-completed">Completed</span></td>
+                            <td>$398.76</td>
+                            <td><a href="#">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#987</td>
+                            <td>May 28, 2023</td>
+                            <td><span class="order-status status-completed">Completed</span></td>
+                            <td>$159.98</td>
+                            <td><a href="#">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#956</td>
+                            <td>May 5, 2023</td>
+                            <td><span class="order-status status-processing">Processing</span></td>
+                            <td>$79.99</td>
+                            <td><a href="#">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 style="margin-top: 2rem;">Saved Addresses</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+                    <div style="background-color: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        <h4 style="margin-bottom: 0.5rem;">Primary Address</h4>
+                        <p>123 Main Street<br>
+                        Anytown, CA 12345<br>
+                        United States</p>
+                        <button class="btn" style="margin-top: 1rem; padding: 0.5rem; font-size: 0.875rem;">Edit Address</button>
+                    </div>
+                    
+                    <div style="background-color: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        <h4 style="margin-bottom: 0.5rem;">Work Address</h4>
+                        <p>456 Business Ave<br>
+                        Suite 200<br>
+                        Anytown, CA 12345<br>
+                        United States</p>
+                        <button class="btn" style="margin-top: 1rem; padding: 0.5rem; font-size: 0.875rem;">Edit Address</button>
+                    </div>
+                </div>
+                
+                <button class="btn" style="margin-top: 1.5rem; width: auto;">Add New Address</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ShopEasy</h3>
+                    <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="account.html">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">TW</a>
+                        <a href="#">IG</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ShopEasy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ShopEasy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">ShopEasy</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html" class="cart-icon">Cart <span class="cart-count">3</span></a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="product-detail">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="https://via.placeholder.com/500" alt="Wireless Headphones">
+                </div>
+                <div class="thumbnail">
+                    <img src="https://via.placeholder.com/150" alt="Wireless Headphones - Angle 1">
+                </div>
+                <div class="thumbnail">
+                    <img src="https://via.placeholder.com/150" alt="Wireless Headphones - Angle 2">
+                </div>
+                <div class="thumbnail">
+                    <img src="https://via.placeholder.com/150" alt="Wireless Headphones - Angle 3">
+                </div>
+                <div class="thumbnail">
+                    <img src="https://via.placeholder.com/150" alt="Wireless Headphones - Angle 4">
+                </div>
+            </div>
+            
+            <div class="product-description">
+                <h1>Premium Wireless Headphones</h1>
+                <div class="price">$99.99</div>
+                <div class="rating">
+                    <div class="stars">★★★★☆</div>
+                    <div class="reviews">(128 reviews)</div>
+                </div>
+                <div class="description">
+                    <p>Experience crystal-clear sound with our premium wireless headphones. Featuring active noise cancellation, 30-hour battery life, and ultra-comfortable ear cushions for extended listening sessions.</p>
+                    <ul>
+                        <li>Active Noise Cancellation</li>
+                        <li>30-hour battery life</li>
+                        <li>Bluetooth 5.0</li>
+                        <li>Built-in microphone</li>
+                        <li>Foldable design</li>
+                    </ul>
+                </div>
+                
+                <div class="quantity-selector">
+                    <button>-</button>
+                    <input type="number" value="1" min="1">
+                    <button>+</button>
+                </div>
+                
+                <button class="btn" style="margin-bottom: 1rem;">Add to Cart</button>
+                <button class="btn" style="background-color: var(--success);">Buy Now</button>
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="section-title">Product Reviews</h2>
+            <div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <strong>John D.</strong>
+                        <div style="color: var(--warning);">★★★★★</div>
+                    </div>
+                    <p>These headphones are amazing! The sound quality is exceptional and the noise cancellation works perfectly on my commute.</p>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <strong>Sarah M.</strong>
+                        <div style="color: var(--warning);">★★★★☆</div>
+                    </div>
+                    <p>Great headphones overall. Battery life is impressive, but they're a bit heavy for long wear.</p>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <strong>Michael T.</strong>
+                        <div style="color: var(--warning);">★★★★★</div>
+                    </div>
+                    <p>Worth every penny! The sound is crisp and clear, and they're very comfortable.</p>
+                </div>
+                
+                <button class="btn" style="width: auto; display: block; margin: 0 auto;">Write a Review</button>
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="section-title">Similar Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/250" alt="Wireless Earbuds">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Wireless Earbuds</h3>
+                        <div class="product-rating">★★★★☆</div>
+                        <div class="product-price">$79.99</div>
+                        <a href="product-detail.html" class="add-to-cart">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/250" alt="Bluetooth Speaker">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Bluetooth Speaker</h3>
+                        <div class="product-rating">★★★☆☆</div>
+                        <div class="product-price">$59.99</div>
+                        <a href="product-detail.html" class="add-to-cart">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/250" alt="Noise Cancelling Headphones">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Noise Cancelling Headphones</h3>
+                        <div class="product-rating">★★★★★</div>
+                        <div class="product-price">$149.99</div>
+                        <a href="product-detail.html" class="add-to-cart">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ShopEasy</h3>
+                    <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="account.html">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <

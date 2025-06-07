@@ -4,154 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3legant - Premium E-Commerce</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-              <img src="img/3legant-b.png" alt="Logo" class="logo" />
+            <a class="navbar-brand" href="index.html">
+                <img src="img/3legant-b.png" alt="Logo" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                </ul>
-                <div class="d-flex">
-                    <div class="input-group search-box">
-                        <input type="text" class="form-control" placeholder="Search products...">
-                        <button class="btn btn-outline-secondary" type="button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <a href="cart.html" class="btn btn-outline-none position-relative">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge bg-danger">0</span>
-                    </a>
-                </div>
-                <div class="d-flex">
-                    <a href="auth.html" class="btn btn-outline-none position-relative"> 
-                        <i class="fa-solid fa-user-plus"></i> 
-                    </a>
-                </div>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    <span>Cart (0)</span>
+                </a>
+                <a href="auth.html" class="user-icon">
+                    <span>Account</span>
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section py-5">
+    <section class="hero-section">
         <div class="container">
-            <div class="hero-flex">
-                <div class="hero-image">
-                    <img src="img/ph1.jpg" alt="Winter collection" class="img-fluid">
-                </div>
+            <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="display-4 fw-bold mb-4">Bring the warmth.</h1>
-                    <p class="lead mb-4">Everything you need to stay cozy this winter. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nam odit explicabo est? Ea, incidunt, consectetur unde est harum cum temporibus in ullam, ipsum voluptatem at inventore delectus? Facilis, quisquam!</p>
-                    <a href="products.html" class="btn btn-primary btn-lg">Shopping Now</a>
+                    <h1>Bring the warmth.</h1>
+                    <p>Everything you need to stay cozy this winter. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="products.html" class="btn">Shopping Now</a>
+                </div>
+                <div class="hero-image">
+                    <img src="img/ph1.jpg" alt="Winter collection">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
+    <section id="about" class="about-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2 class="mb-4">About Us</h2>
-                    <p class="mb-3">We are dedicated to bringing you the coziest and most stylish winter collections. Our mission is to keep you warm and fashionable all season long.</p>
-                    <p>From jackets and scarves to boots and accessories, we carefully curate products that combine comfort with trend. Discover the warmth in every detail. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi officiis ad corporis harum odio saepe quo minima fuga eligendi corrupti impedit aperiam, facilis magni vero voluptatem omnis aut ab porro!</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>We are dedicated to bringing you the coziest and most stylish winter collections. Our mission is to keep you warm and fashionable all season long.</p>
+                    <p>From jackets and scarves to boots and accessories, we carefully curate products that combine comfort with trend. Discover the warmth in every detail.</p>
                 </div>
-                <div class="col-md-6">
-                    <img src="img/ph2.jpg" alt="About us" class="img-fluid">
+                <div class="about-image">
+                    <img src="img/ph2.jpg" alt="About us">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Trending Products -->
-    <section class="py-5 bg-light">
+    <section class="trending-section">
         <div class="container">
-            <h2 class="text-center mb-5">Trending Brands</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="img/product1.jpg" class="card-img-top" alt="Product 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Winter Jacket</h5>
-                            <p class="card-text">$99.99</p>
-                            <a href="product-details.html" class="btn btn-primary">View Details</a>
-                        </div>
-                    </div>
+            <h2>Trending Brands</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="img/product1.jpg" alt="Winter Jacket">
+                    <h3>Winter Jacket</h3>
+                    <p>$99.99</p>
+                    <a href="product-details.html" class="btn">View Details</a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="img/product2.jpg" class="card-img-top" alt="Product 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Wool Scarf</h5>
-                            <p class="card-text">$29.99</p>
-                            <a href="product-details.html" class="btn btn-primary">View Details</a>
-                        </div>
-                    </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="img/product2.jpg" alt="Wool Scarf">
+                    <h3>Wool Scarf</h3>
+                    <p>$29.99</p>
+                    <a href="product-details.html" class="btn">View Details</a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="img/product3.jpg" class="card-img-top" alt="Product 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Winter Boots</h5>
-                            <p class="card-text">$129.99</p>
-                            <a href="product-details.html" class="btn btn-primary">View Details</a>
-                        </div>
-                    </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="img/product3.jpg" alt="Winter Boots">
+                    <h3>Winter Boots</h3>
+                    <p>$129.99</p>
+                    <a href="product-details.html" class="btn">View Details</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
+    <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="index.html">
-                        <img src="img/3legant-w.png" alt="Logo" class="logo" />
-                    </a>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="img/3legant-w.png" alt="Logo" class="logo">
                     <p>Premium e-commerce platform for fashion enthusiasts.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="footer-links">
                     <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">Home</a></li>
-                        <li><a href="products.html" class="text-white">Shop</a></li>
-                        <li><a href="cart.html" class="text-white">Cart</a></li>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="cart.html">Cart</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="footer-social">
                     <h5>Follow Us</h5>
-                    <a href="https://www.instagram.com/" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://web.facebook.com/" class="text-white me-2"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://x.com/" class="text-white me-2"><i class="fa-brands fa-square-twitter"></i></a>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/">Instagram</a>
+                        <a href="https://web.facebook.com/">Facebook</a>
+                        <a href="https://x.com/">Twitter</a>
+                    </div>
                 </div>
             </div>
-            <hr>
-            <div class="text-center">
+            <div class="footer-copyright">
                 <p>&copy; 2025 3legant - Premium E-Commerce. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/all.min.js"></script>
 </body>
 </html>
